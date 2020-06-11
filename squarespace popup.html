@@ -1,0 +1,181 @@
+<script>
+function modalfunc() {
+  // Get the modal
+  var modal = document.getElementById('myModal');
+  modal.style.display = "block";
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("dismissbutton")[0];
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+      modal.style.display = "none";
+  };
+  var span2 = document.getElementsByClassName("close")[0];
+  // When the user clicks on <span> (x), close the modal
+  span2.onclick = function() {
+      modal.style.display = "none";
+  };
+    
+  //clicking anywhere outside of the modal, close it
+  window.onclick = function(event) {
+        if (event.target == modal) {
+                modal.style.display = "none";
+        }
+  };
+}
+window.onload = function(){
+  modalfunc();
+}
+</script>
+
+<style>
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.3); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  font-family: europa;
+  position: relative;
+  top: 10%;
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(255,255,255,0.9);
+  padding: 1%;
+  line-height:1px
+  border: 0px;
+  border-radius: 5px;
+  width: 80%; /* Could be more or less, depending on screen size */
+  text-align: center;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animatetop;
+  animation-duration: ease-out;
+  z-index: 10;
+}
+
+/* The Close Button */
+.close {
+  color: #00bbff;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-transition: all .125s ease-out;
+  -moz-transition: all .125s ease-out;
+  -o-transition: all .125s ease-out;
+  transition: all .125s ease-out;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:0px; opacity:0} 
+  to {top:20%; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:0px; opacity:0}
+  to {top:10%; opacity:1}
+}
+
+.dismissbutton {
+  font-family: sans-serif;
+  font-size: 30px
+  top: 2px;
+  background-color: rgb(0, 183, 255, 0.8);
+  color: white;
+  margin: 4px 2px;
+  border-radius: 5px;
+  border: 2px solid rgb(0, 183, 255, 0.8);
+  padding: 10px 30px;
+  cursor: pointer;
+  letter-spacing: 3px;
+  -webkit-transition: all .125s ease-out;
+  -moz-transition: all .125s ease-out;
+  -o-transition: all .125s ease-out;
+  transition: all .125s ease-out;
+}
+.dismissbutton:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.livebutton {
+  font-family: sans-serif;
+  font-size: 30px
+  top: 2px;
+  background-color: rgb(0, 183, 255, 0.8);
+  color: white;
+  margin: 4px 2px;
+  border-radius: 5px;
+  border: 2px solid rgb(0, 183, 255, 0.8);
+  padding: 10px 30px;
+  cursor: pointer;
+  letter-spacing: 3px;
+  -webkit-transition: all .125s ease-out;
+  -moz-transition: all .125s ease-out;
+  -o-transition: all .125s ease-out;
+  transition: all .125s ease-out;
+}
+.livebutton:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.a:link{
+color: black;
+text-decoration: none;
+}
+.a:visited{
+color: black;
+text-decoration: none;
+}
+.a:hover{
+color: rgb(0, 183, 255)
+text-decoration: none;
+}
+
+</style>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p style="color: black; font-family: sans-serif; font-size: 30px; padding-left: 15vw; padding-right: 15vw;">
+    <b>Heading</b>
+    <hr>
+    </p>
+    <p style="color: black; font-family: sans-serif; font-size: 20px; padding-left: 15vw; padding-right: 15vw;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href=""><b>Link Here</b></a> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <br><br> 
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <hr>
+    <p></p>
+    <a>
+    <input type='button' onclick='window.open("")' class="livebutton" style="font-size: 25px;" value='Link'/>
+    <br>
+    <button class="dismissbutton" style="font-size: 25px;">Dismiss</button> 
+    </a>
+    <br>
+    </p>
+  </div>
+
+</div>
